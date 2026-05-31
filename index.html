@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - IT Engineer & Data Analyst</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        dark: '#09090b',
+                        card: 'rgba(255, 255, 255, 0.03)',
+                        primary: '#a855f7',
+                        secondary: '#ec4899',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-dark text-gray-200 font-sans antialiased overflow-x-hidden selection:bg-primary selection:text-white">
+
+    <!-- Background Ambient Gradients -->
+    <div class="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
+        <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-primary/20 blur-[120px]"></div>
+        <div class="absolute top-[40%] right-[-10%] w-[30%] h-[50%] rounded-full bg-secondary/10 blur-[150px]"></div>
+        <div class="absolute bottom-[-10%] left-[20%] w-[40%] h-[40%] rounded-full bg-primary/10 blur-[120px]"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-white flex items-center gap-2">
+                <i class="fa-solid fa-code text-primary"></i> <span class="hidden sm:block">Nexflow</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#about" class="hover:text-primary transition-colors">À Propos</a>
+                <a href="#experience" class="hover:text-primary transition-colors">Expérience</a>
+                <a href="#services" class="hover:text-primary transition-colors">Services</a>
+            </div>
+            <a href="#contact" class="btn-gradient text-white px-6 py-2.5 rounded-full font-medium text-sm hover:scale-105 transition-transform shadow-lg shadow-primary/30">
+                Me Contacter
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center pt-24 pb-12 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center w-full relative z-10">
+            <div class="space-y-6 reveal">
+                <h1 class="text-5xl md:text-7xl font-bold text-white leading-tight">
+                    Bonjour, <br>
+                    <span class="text-gray-400 text-3xl md:text-4xl block mt-2 font-normal">Je conçois des solutions évolutives, des données à l'interface.</span>
+                </h1>
+                
+                <div class="py-8 relative">
+                    <!-- Left side tags -->
+                    <div class="space-y-4 relative z-10">
+                        <div class="glass-card inline-block px-6 py-3 rounded-full border-l-4 border-l-primary shadow-lg shadow-black/50 hover:-translate-y-1 transition-transform cursor-default">Ingénieur IT</div><br>
+                        <div class="glass-card inline-block px-6 py-3 rounded-full border-l-4 border-l-secondary shadow-lg shadow-black/50 ml-8 hover:-translate-y-1 transition-transform cursor-default">Machine Learning</div><br>
+                        <div class="glass-card inline-block px-6 py-3 rounded-full border-l-4 border-l-primary shadow-lg shadow-black/50 ml-16 hover:-translate-y-1 transition-transform cursor-default">Data Processing</div>
+                    </div>
+                    
+                    <h2 class="text-4xl md:text-6xl font-extrabold mt-12 text-white">
+                        Je suis <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">[Votre Nom]</span>
+                    </h2>
+                </div>
+            </div>
+            
+            <div class="relative reveal delay-200 hidden lg:block">
+                <!-- Decorative Nodes Network -->
+                <svg class="absolute top-1/2 left-0 w-full h-full -translate-y-1/2 -z-10 opacity-30" viewBox="0 0 400 400">
+                    <path d="M50,200 Q150,100 250,200 T400,200" fill="none" stroke="url(#grad)" stroke-width="2"/>
+                    <circle cx="50" cy="200" r="5" fill="#a855f7"/>
+                    <circle cx="250" cy="200" r="5" fill="#a855f7"/>
+                    <circle cx="400" cy="200" r="5" fill="#ec4899"/>
+                    <defs>
+                        <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#a855f7" />
+                            <stop offset="100%" stop-color="#ec4899" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+
+                <div class="relative w-80 h-80 mx-auto rounded-full p-2 bg-gradient-to-br from-primary to-secondary shadow-2xl shadow-primary/20">
+                    <div class="w-full h-full bg-dark rounded-full overflow-hidden border-4 border-dark">
+                        <!-- Placeholder for Portrait Image -->
+                        <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?q=80&w=1000&auto=format&fit=crop" alt="Portrait" class="w-full h-full object-cover object-center grayscale hover:grayscale-0 transition-all duration-500">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-6 glass-card rounded-3xl p-10 md:p-16 grid lg:grid-cols-2 gap-12 items-center reveal">
+            <div>
+                <h2 class="text-3xl font-bold text-white mb-6">À Propos de Moi</h2>
+                <p class="text-gray-400 leading-relaxed mb-6">
+                    Ingénieur IT passionné par le traitement des données et l'optimisation des systèmes. De la modélisation d'algorithmes de Machine Learning à la customisation avancée d'environnements mobiles, j'aime résoudre des problèmes complexes grâce à une approche analytique et technique pointue.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 rounded-full glass-card flex items-center justify-center hover:bg-primary transition-colors hover:text-white"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full glass-card flex items-center justify-center hover:bg-primary transition-colors hover:text-white"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+            <div class="space-y-6">
+                <div class="glass-card p-6 rounded-2xl flex items-start gap-4 border border-white/5 hover:border-primary/50 transition-colors">
+                    <div class="w-12 h-12 rounded-xl bg-primary/20 text-primary flex items-center justify-center text-xl shrink-0">
+                        <i class="fa-solid fa-chart-network"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-semibold mb-1">Machine Learning & Data</h3>
+                        <p class="text-sm text-gray-400">Expertise en algorithmes de clustering (DBSCAN), apprentissage supervisé/non supervisé, et feature engineering.</p>
+                    </div>
+                    <i class="fa-solid fa-arrow-right text-gray-600 ml-auto mt-2"></i>
+                </div>
+                <div class="glass-card p-6 rounded-2xl flex items-start gap-4 border border-white/5 hover:border-secondary/50 transition-colors">
+                    <div class="w-12 h-12 rounded-xl bg-secondary/20 text-secondary flex items-center justify-center text-xl shrink-0">
+                        <i class="fa-solid fa-mobile-screen"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-semibold mb-1">Optimisation & Systèmes</h3>
+                        <p class="text-sm text-gray-400">Maitrise des environnements logiciels, scripts d'automatisation, et traitement de données en temps réel (online vs batch learning).</p>
+                    </div>
+                    <i class="fa-solid fa-arrow-right text-gray-600 ml-auto mt-2"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience / Success Stories -->
+    <section id="experience" class="py-20">
+        <div class="max-w-4xl mx-auto px-6 reveal">
+            <h2 class="text-3xl font-bold text-white mb-12 text-center">Réalisations & Projets Techniques</h2>
+            
+            <div class="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-white/10 before:to-transparent">
+                
+                <!-- Timeline Item 1 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-dark bg-primary shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                        <i class="fa-solid fa-database text-xs text-white"></i>
+                    </div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] glass-card p-6 rounded-2xl hover:border-primary/50 transition-colors">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-bold text-white text-lg">Projet d'Analyse: Clustering de Véhicules</h3>
+                            <span class="text-xs font-medium text-primary bg-primary/10 px-2 py-1 rounded-full">Projet Récent</span>
+                        </div>
+                        <p class="text-sm text-gray-300 mb-4">Développement d'une logique algorithmique basée sur DBSCAN pour identifier les clusters de véhicules et définir des zones de base. Génération de figures analytiques basées sur les distances de points et les fréquences de visite.</p>
+                        <div class="mt-4 flex gap-2 flex-wrap">
+                            <span class="text-xs text-gray-400 bg-white/5 px-3 py-1 rounded-full">DBSCAN</span>
+                            <span class="text-xs text-gray-400 bg-white/5 px-3 py-1 rounded-full">Machine Learning</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-dark bg-secondary shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                        <i class="fa-solid fa-terminal text-xs text-white"></i>
+                    </div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] glass-card p-6 rounded-2xl hover:border-secondary/50 transition-colors">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-bold text-white text-lg">Optimisation OS & Débloatware</h3>
+                            <span class="text-xs font-medium text-secondary bg-secondary/10 px-2 py-1 rounded-full">Personnel</span>
+                        </div>
+                        <p class="text-sm text-gray-300">Conception d'une méthode de nettoyage système strict pour appareils mobiles (ex: Redmi 15C). Suppression totale des applications pré-installées via ligne de commande pour maximiser les performances et la sécurité.</p>
+                        <div class="mt-4 flex gap-2 flex-wrap">
+                            <span class="text-xs text-gray-400 bg-white/5 px-3 py-1 rounded-full">Scripting</span>
+                            <span class="text-xs text-gray-400 bg-white/5 px-3 py-1 rounded-full">Android OS</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-black/20">
+        <div class="max-w-7xl mx-auto px-6 reveal">
+            <h2 class="text-3xl font-bold text-white mb-12 text-center">Compétences & Atouts</h2>
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="glass-card p-8 rounded-2xl text-center hover:-translate-y-2 transition-transform duration-300 border border-transparent hover:border-primary/30 group">
+                    <div class="w-16 h-16 mx-auto bg-gradient-to-br from-primary/20 to-transparent rounded-full flex items-center justify-center text-2xl text-primary mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Rapide</h3>
+                    <p class="text-sm text-gray-400">Traitement de données optimisé et exécution d'algorithmes performants.</p>
+                </div>
+                <div class="glass-card p-8 rounded-2xl text-center hover:-translate-y-2 transition-transform duration-300 border border-transparent hover:border-secondary/30 group">
+                    <div class="w-16 h-16 mx-auto bg-gradient-to-br from-secondary/20 to-transparent rounded-full flex items-center justify-center text-2xl text-secondary mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-chart-pie"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Analytique</h3>
+                    <p class="text-sm text-gray-400">Capacité de transformer des données brutes en informations claires (Data Processing).</p>
+                </div>
+                <div class="glass-card p-8 rounded-2xl text-center hover:-translate-y-2 transition-transform duration-300 border border-transparent hover:border-primary/30 group">
+                    <div class="w-16 h-16 mx-auto bg-gradient-to-br from-primary/20 to-transparent rounded-full flex items-center justify-center text-2xl text-primary mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Machine Learning</h3>
+                    <p class="text-sm text-gray-400">Implémentation de modèles ML, du batch learning aux algorithmes non supervisés.</p>
+                </div>
+                <div class="glass-card p-8 rounded-2xl text-center hover:-translate-y-2 transition-transform duration-300 border border-transparent hover:border-secondary/30 group">
+                    <div class="w-16 h-16 mx-auto bg-gradient-to-br from-secondary/20 to-transparent rounded-full flex items-center justify-center text-2xl text-secondary mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-code-merge"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Intégration</h3>
+                    <p class="text-sm text-gray-400">Création de pipelines fluides entre le traitement des données et l'interface utilisateur.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20">
+        <div class="max-w-7xl mx-auto px-6 reveal">
+            <h2 class="text-3xl font-bold text-white mb-12 text-center">Projets Récents</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Project 1 (Large Title Area) -->
+                <div class="glass-card p-10 rounded-3xl flex flex-col justify-center items-start">
+                    <h3 class="text-4xl font-bold text-white mb-4 leading-tight">Solutions IT<br>Innovantes & <br>Modélisation</h3>
+                    <p class="text-gray-400 mb-6">Explorez mes récents travaux mêlant algorithmique avancée, machine learning, et ingénierie de données.</p>
+                    <a href="#" class="text-primary font-medium hover:text-white transition-colors flex items-center gap-2">Voir tous les projets <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                
+                <!-- Project 2 (Data Viz) -->
+                <div class="glass-card rounded-3xl p-6 overflow-hidden group cursor-pointer border border-white/5 hover:border-primary/50 transition-all duration-300">
+                    <div class="aspect-[4/3] bg-gradient-to-br from-gray-800 to-black rounded-xl overflow-hidden relative flex items-center justify-center">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop" alt="Data Dashboard" class="object-cover w-full h-full opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500">
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <span class="bg-black/70 backdrop-blur-md text-white px-6 py-2 rounded-full text-sm font-medium border border-white/10">Voir l'Étude</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 (Code / ML) -->
+                <div class="glass-card rounded-3xl p-6 overflow-hidden group cursor-pointer border border-white/5 hover:border-secondary/50 transition-all duration-300 md:col-span-2 lg:col-span-1">
+                    <div class="aspect-video bg-gradient-to-br from-gray-800 to-black rounded-xl overflow-hidden relative flex items-center justify-center">
+                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1000&auto=format&fit=crop" alt="Code AI" class="object-cover w-full h-full opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500">
+                    </div>
+                    <div class="mt-6">
+                        <h4 class="text-xl font-bold text-white mb-2">Clustering de données géolocalisées via DBSCAN</h4>
+                        <p class="text-sm text-gray-400">Un algorithme capable de regrouper les données de visite de véhicules pour générer des zones d'attraction en analysant la densité des points.</p>
+                    </div>
+                </div>
+
+                <!-- Project 4 (Scripting) -->
+                <div class="glass-card rounded-3xl p-6 overflow-hidden group cursor-pointer border border-white/5 hover:border-primary/50 transition-all duration-300">
+                    <div class="aspect-video bg-gradient-to-br from-gray-800 to-black rounded-xl overflow-hidden relative flex items-center justify-center">
+                        <img src="https://images.unsplash.com/photo-1607972804245-09d57a2bd22e?q=80&w=1000&auto=format&fit=crop" alt="Terminal Scripting" class="object-cover w-full h-full opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500">
+                    </div>
+                    <div class="mt-6 flex justify-between items-center">
+                        <div>
+                            <h4 class="text-xl font-bold text-white mb-1">CleanOS Setup</h4>
+                            <p class="text-sm text-gray-400">Automatisation & suppression des bloatwares</p>
+                        </div>
+                        <span class="w-10 h-10 rounded-full glass-card flex items-center justify-center group-hover:bg-primary transition-colors"><i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="glass-card px-8 py-3 rounded-full text-white font-medium hover:bg-white/10 transition-colors border border-white/10">Voir Plus</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 relative">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-lg h-64 bg-primary/20 blur-[120px] rounded-full -z-10"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-3 gap-12 items-start reveal">
+            <div class="lg:sticky lg:top-32">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Des Solutions IT sur-mesure pour vos besoins</h2>
+                <p class="text-gray-400 mb-8">De l'analyse de vos données jusqu'à l'architecture technique de vos projets, j'apporte une expertise ciblée.</p>
+                <div class="flex gap-4">
+                    <button class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors"><i class="fa-solid fa-arrow-left"></i></button>
+                    <button class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center bg-white/5 hover:bg-white/10 transition-colors"><i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+            
+            <div class="lg:col-span-2 grid sm:grid-cols-2 gap-6">
+                <!-- Service Card 1 -->
+                <div class="glass-card p-8 rounded-2xl hover:border-primary/50 transition-all hover:shadow-[0_0_30px_-5px_rgba(168,85,247,0.3)]">
+                    <div class="w-12 h-12 rounded-lg bg-primary/20 text-primary flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Machine Learning & IA</h3>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-primary text-xs"></i> Apprentissage supervisé et non supervisé</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-primary text-xs"></i> Développement de modèles (ex: DBSCAN)</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-primary text-xs"></i> Batch vs Online Learning</li>
+                    </ul>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="glass-card p-8 rounded-2xl hover:border-secondary/50 transition-all hover:shadow-[0_0_30px_-5px_rgba(236,72,153,0.3)]">
+                    <div class="w-12 h-12 rounded-lg bg-secondary/20 text-secondary flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Data Processing</h3>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-secondary text-xs"></i> Feature engineering avancé</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-secondary text-xs"></i> Nettoyage et structuration des données</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-secondary text-xs"></i> Génération de rapports et figures</li>
+                    </ul>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="glass-card p-8 rounded-2xl hover:border-primary/50 transition-all hover:shadow-[0_0_30px_-5px_rgba(168,85,247,0.3)]">
+                    <div class="w-12 h-12 rounded-lg bg-primary/20 text-primary flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-gears"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Optimisation de Systèmes</h3>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-primary text-xs"></i> Audits de performance système</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-primary text-xs"></i> Nettoyage de bloatware (Mobile/Desktop)</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-primary text-xs"></i> Automatisation par script</li>
+                    </ul>
+                </div>
+
+                <!-- Service Card 4 -->
+                <div class="glass-card p-8 rounded-2xl hover:border-secondary/50 transition-all hover:shadow-[0_0_30px_-5px_rgba(236,72,153,0.3)]">
+                    <div class="w-12 h-12 rounded-lg bg-secondary/20 text-secondary flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Développement Web</h3>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-secondary text-xs"></i> Création d'interfaces utilisateur modernes</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-secondary text-xs"></i> Intégration de modèles de données</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-secondary text-xs"></i> Architecture responsive et performante</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="pt-20 pb-10 border-t border-white/10 bg-black/50 mt-20">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12 mb-16">
+            <div class="md:col-span-2">
+                <a href="#" class="text-2xl font-bold text-white flex items-center gap-2 mb-6">
+                    <i class="fa-solid fa-code text-primary"></i> Nexflow
+                </a>
+                <p class="text-gray-400 mb-6 max-w-sm">Recevez les dernières mises à jour, des astuces technologiques et des insights sur mes solutions IT directement dans votre boîte mail.</p>
+            </div>
+            
+            <div>
+                <h4 class="text-white font-bold mb-6">Liens Rapides</h4>
+                <ul class="space-y-4 text-gray-400 text-sm">
+                    <li><a href="#" class="hover:text-primary transition-colors">Accueil</a></li>
+                    <li><a href="#about" class="hover:text-primary transition-colors">À Propos</a></li>
+                    <li><a href="#experience" class="hover:text-primary transition-colors">Expérience</a></li>
+                    <li><a href="#services" class="hover:text-primary transition-colors">Services</a></li>
+                    <li><a href="#projects" class="hover:text-primary transition-colors">Portfolio</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h4 class="text-white font-bold mb-6">Newsletter</h4>
+                <form class="glass-card p-2 rounded-full flex">
+                    <input type="email" placeholder="Votre email" class="bg-transparent border-none outline-none text-white px-4 py-2 w-full text-sm" required>
+                    <button type="submit" class="btn-gradient text-white px-6 py-2 rounded-full text-sm font-medium hover:scale-105 transition-transform">S'abonner</button>
+                </form>
+                
+                <h4 class="text-white font-bold mb-4 mt-8">Réseaux Sociaux</h4>
+                <div class="flex gap-4">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-6 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500 gap-4">
+            <p>&copy; 2026. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
