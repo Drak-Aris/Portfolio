@@ -1,0 +1,8 @@
+{
+  "name": "portfolio-nexflow",
+  "version": "1.0.0",
+  "description": "Portfolio de Fotue Aris",
+  "scripts": {
+    "start": "npx http-server . -p 8080 -c-1"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "Portfolio",
+  "image": "node:24-slim",
+  "forwardPorts": [8080],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ritwickdey.LiveServer"
+      ]
+    }
+  }
+}

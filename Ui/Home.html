@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="Styles/HomeS.css">
+    <link rel="stylesheet" href="./../Styles/HomeS.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -65,9 +65,10 @@
                 </div>
             </div>
             
-            <div class="relative reveal delay-200 hidden lg:block">
-                <!-- Decorative Nodes Network -->
-                <svg class="absolute top-1/2 left-0 w-full h-full -translate-y-1/2 -z-10 opacity-30" viewBox="0 0 400 400">
+            <div class="relative reveal delay-200 mt-8 lg:mt-0 flex justify-center items-center">
+                
+                <!-- Decorative Nodes Network (conservé uniquement sur grand écran car il déborde sur mobile) -->
+                <svg class="absolute top-1/2 left-0 w-full h-full -translate-y-1/2 -z-10 opacity-30 hidden lg:block" viewBox="0 0 400 400">
                     <path d="M50,200 Q150,100 250,200 T400,200" fill="none" stroke="url(#grad)" stroke-width="2"/>
                     <circle cx="50" cy="200" r="5" fill="#a855f7"/>
                     <circle cx="250" cy="200" r="5" fill="#a855f7"/>
@@ -80,12 +81,13 @@
                     </defs>
                 </svg>
 
-                <div class="relative w-80 h-80 mx-auto rounded-full p-2 bg-gradient-to-br from-primary to-secondary shadow-2xl shadow-primary/20">
+                <!-- Cadre adaptable : w-64 h-64 (mobile) -> sm:w-80 sm:h-80 (tablette) -> lg:w-[450px] lg:h-[450px] (desktop) -->
+                <div class="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-[500px] lg:h-[500px] mx-auto rounded-full p-2 bg-gradient-to-br from-primary to-secondary shadow-2xl shadow-primary/20 shrink-0">
                     <div class="w-full h-full bg-dark rounded-full overflow-hidden border-4 border-dark">
-                        <!-- Placeholder for Portrait Image -->
-                        <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?q=80&w=1000&auto=format&fit=crop" alt="Portrait" class="w-full h-full object-cover object-center grayscale hover:grayscale-0 transition-all duration-500">
+                        <img src="./../Images/Image ARIS.jpeg" alt="Portrait" class="w-full h-full object-cover object-center grayscale hover:grayscale-0 transition-all duration-500">
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
